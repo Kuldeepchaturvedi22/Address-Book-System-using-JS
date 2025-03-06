@@ -102,3 +102,6 @@ function sortByName() {
             a.lastName.localeCompare(b.lastName)
     );
 }
+function sortBy(attribute) {
+    return addressBook.sort((a, b) => a[attribute].localeCompare(b[attribute]));
+}
