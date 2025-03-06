@@ -80,3 +80,8 @@ function addUniqueContact(contact) {
         console.error("Duplicate Contact");
     }
 }
+function searchByCityOrState(cityOrState) {
+    return addressBook.filter(
+        (contact) => contact.city === cityOrState || contact.state === cityOrState
+    );
+}
