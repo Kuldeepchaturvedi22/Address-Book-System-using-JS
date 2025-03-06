@@ -35,3 +35,10 @@ function validateContact(contact) {
         return false;
     return true;
 }
+function addContact(contact) {
+    if (validateContact(contact)) {
+        addressBook.push(contact);
+    } else {
+        console.error("Invalid Contact");
+    }
+}
