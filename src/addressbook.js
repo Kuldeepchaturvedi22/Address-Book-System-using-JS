@@ -52,3 +52,13 @@ function editContactByName(name, newContact) {
         addressBook[index] = newContact;
     }
 }
+function deleteContactByName(name) {
+    const index = addressBook.findIndex(
+        (contact) =>
+            contact.firstName === name.split(" ")[0] &&
+            contact.lastName === name.split(" ")[1]
+    );
+    if (index !== -1) {
+        addressBook.splice(index, 1);
+    }
+}
